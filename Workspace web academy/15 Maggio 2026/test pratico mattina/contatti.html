@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flower SHOP-CONTATTI</title>
+
+  <link rel="stylesheet" href="layout.css">
+
+<!--COLLEGAMENTO CON IL FONT ESTERNO-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR E MENU-->
+  <header>
+    <nav>
+     <div class="logo_container"><a  href="index.html"><img class="logo" src="image/logo.png"></a></div>
+      <div>
+        <a href="#">Prodotti</a>
+        <a href="#">Chi siamo</a>
+        <a href="#">Contatti</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CONTENUTO -->
+  <main>
+
+    <!-- NON FUNZIONA ANCORA, E' SOLO VISUALIZZABILE -->
+    <form class="contact-form" action="#" method="post">
+
+  <h2>Modulo di contatto</h2>
+
+  <label for="nome">Nome e cognome</label>
+  <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="La tua email" required>
+
+  <label for="telefono">Telefono</label>
+  <input type="tel" id="telefono" name="telefono" placeholder="Il tuo numero">
+
+  <label for="oggetto">Oggetto</label>
+  <input type="text" id="oggetto" name="oggetto" placeholder="Oggetto della richiesta">
+
+  <label for="messaggio">Messaggio</label>
+  <textarea id="messaggio" name="messaggio" rows="5" placeholder="Scrivi qui la tua richiesta..." required></textarea>
+
+  <button type="submit">Invia</button>
+
+</form>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Flower SHOP. Tutti i diritti riservati.</p>
+  </footer>
+
+</body>
+</html>
