@@ -26,12 +26,21 @@ for (let n of numeri) {
 
 }
 
+if(numeri.length !== 0)
+{
 n_max = Math.max(...numeri);
 n_min = Math.min(...numeri);
+} else {
+    numeri = "nessun numero inserito";
+}
+
+
 
 if(numeri_pari.length === 0) numeri_pari = "nessun numero pari inserito";
 
 if(numeri_dispari.length === 0) numeri_dispari = "nessun numero dispari inserito";
+
+
 
 console.log("numeri inseriti: \n" +
     numeri +
