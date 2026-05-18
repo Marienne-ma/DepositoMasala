@@ -10,7 +10,7 @@ do {
 
         request = Number(request);
 
-        if (Number.isNaN(request) || request % 2 !== 0) {
+        if (Number.isNaN(request) || request < 0) {
 
             console.log("valore non valido");
             condition = false;
