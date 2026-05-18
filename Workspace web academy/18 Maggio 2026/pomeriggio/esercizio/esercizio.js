@@ -80,7 +80,7 @@ do {
 
 
 console.log("stringhe inserite: \n"+vario[0]+
-    "\n numeri inseriti: \n"+vario[1]
+    "\nnumeri inseriti: \n"+vario[1]
 )
 
 
