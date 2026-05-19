@@ -69,6 +69,7 @@ function verificaNumeri(request) {
     if (!isNaN(n_1) && !isNaN(n_2)) {
 
         operazione_switch(request);
+        
         request = prompt("vuoi continuare?\n SI\n NO");
         
         (request === "SI") ? condition = true : condition = false;
