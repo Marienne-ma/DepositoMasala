@@ -30,20 +30,6 @@ do {
 
 } while (condition);
 
-
-
-
-
-function controlWord(word) {
-
-    if (word !== "") {
-        words.push(word);
-        pushToUpper(word);
-        n_words++;
-    }
-
-}
-
 wordMax();
 wordMin();
 nVowel();
@@ -56,6 +42,20 @@ console.log(
     "\nLe parole che iniziano con vocali sono: " + n_vowel+
     "\nLa parole trasformate in maiuscolo: " + wordsUpper
 );
+
+
+
+//funzioni
+
+function controlWord(word) {
+
+    if (word !== "") {
+        words.push(word);
+        pushToUpper(word);
+        n_words++;
+    }
+
+}
 
 
 function wordMax() {
