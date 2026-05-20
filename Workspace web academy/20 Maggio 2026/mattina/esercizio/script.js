@@ -37,30 +37,54 @@ button.addEventListener("click", function () {
         alert("input vuoto");
 
     } else {
-       
+
         let y = checkList(input_value);
 
         new_element.textContent = input_value;
+
+
+        let deleteBtn = document.createElement("button");
+
+        deleteBtn.textContent = "❌";
+
+        deleteBtn.addEventListener("click", function (e) {
+
+            e.stopPropagation(); // evita cambio colore del li
+            new_element.remove();
+
+            n--;
+
+            if(n === 0) {
+                list.style.display = "none";
+                 n_list.style.display = "none";
+    button_list.style.display = "none";
+            }
+
+            updateNList();
+        });
+
+
         input.value = "";
         new_element.classList.toggle("bold");
 
-       
 
-        if(y === 0 ){
+
+        if (y === 0) {
             n++;
             list.appendChild(new_element);
+            new_element.appendChild(deleteBtn);
             list.style.display = "block";
             n_list.style.display = "block";
             button_list.style.display = "block";
             updateNList();
             return;
         }
-        
+
         alert("elemento già esistente");
     }
 
-    
-    
+
+
 
 });
 
@@ -71,6 +95,7 @@ button_list.addEventListener("click", function () {
     list.style.display = "none";
     n_list.style.display = "none";
     button_list.style.display = "none";
+    n = 0;
 
 });
 
@@ -99,18 +124,18 @@ function eventMouseOverButton() {
 
     let buttons = document.querySelectorAll("button");
 
-    for(let i of buttons) {
+    for (let i of buttons) {
 
         i.addEventListener("mouseover", function () {
             this.style.backgroundColor = "rgb(237, 114, 134)";
-             this.style.color = "black";
+            this.style.color = "black";
 
         });
 
-         i.addEventListener("mouseout", function () {
-        this.style.backgroundColor = "";
-        this.style.color = "";
-    });
+        i.addEventListener("mouseout", function () {
+            this.style.backgroundColor = "";
+            this.style.color = "";
+        });
 
 
 

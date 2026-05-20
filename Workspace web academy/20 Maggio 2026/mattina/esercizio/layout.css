@@ -65,11 +65,20 @@ ul {
 }
 
 li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #ffe5ec;
     margin: 5px 0;
     padding: 8px;
     border-radius: 10px;
     transition: 0.3s;
+}
+
+li button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
 }
 
 li:hover {
