@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+    /* Sfondo immagine */
+    background-image: url("https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenitore effetto vetro */
+body > * {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Titolo */
+#title {
+    text-align: center;
+    color: #6d5dfc;
+}
+
+/* Paragrafo */
+#paragraph {
+    
+    color: #555;
+    text-align: center;
+}
+
+/* Input */
+#input {
+    padding: 10px;
+    border: 2px solid #d6c8ff;
+    border-radius: 10px;
+    outline: none;
+}
+
+/* Bottoni pastello */
+.buttons {  
+    border: 0;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #cdb4ff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Lista */
+ul {
+    list-style: none;
+    padding: 10;
+}
+
+li {
+    background: #ffe5ec;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+li:hover {
+    transform: scale(1.03);
+    background: #ffd6ff;
+}
+
+/* Contatore */
+#n_list {
+    
+    text-align: center;
+    font-weight: bold;
+    color: #6d5dfc;
+}
+
+#n_list, #list, #button_list {
+     display: none;
+}
+
+/* Classe già presente */
+.bold {
+    font-weight: bold;
+}
