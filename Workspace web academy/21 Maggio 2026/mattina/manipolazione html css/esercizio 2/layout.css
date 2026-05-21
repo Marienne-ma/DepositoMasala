@@ -5,13 +5,14 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Playwrite GB S", cursive;
   height: 100vh;
 
   background-image: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 .page-container {
@@ -27,19 +28,17 @@ body {
   background-color: rgba(60, 45, 35, 0.55);
 }
 
-body.light-theme {
-  background-image: none;
-  background-color: #f5f0e6;
-}
+
 
 body.light-theme .page-container {
   background-color: rgba(255, 250, 240, 0.7);
 }
 
 body.light-theme .navbar,
-body.light-theme .footer {
+body.light-theme .footer,
+body.light-theme .active {
   background-color: #a68a72;
-  color: #fffaf3;
+  
 }
 
 body.light-theme .main-content {
@@ -49,6 +48,37 @@ body.light-theme .main-content {
 body.light-theme #title {
   color: #5c4636;
 }
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 250, 242, 0.35);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #8b6a56,
+    #6a4a3a
+  );
+
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #a67c67,
+    #7a5c4b
+  );
+}
+
 
 .navbar {
   grid-area: navbar;
@@ -63,6 +93,7 @@ body.light-theme #title {
 }
 
 .nav-left {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 15px;
@@ -96,9 +127,10 @@ body.light-theme #title {
 }
 
 .main-content {
+  height:100%;
   grid-area: main;
-  overflow-y: auto;
-  padding: 30px;
+  overflow-y: hidden;
+  padding: 20px;
   color: #f5f0e6;
 }
 
@@ -117,19 +149,20 @@ body.light-theme #title {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 25px;
-  margin-top: 20px;
 }
 
 .left-panel {
+  
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
 .right-panel {
-  overflow-y: auto;
-  max-height: 75vh;
-  padding-right: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  max-height: 61vh;
+  padding: 10px;
 }
 
 .books_grid {
@@ -175,7 +208,7 @@ body.light-theme #title {
 
 .book_form {
   background: rgba(255, 250, 242, 0.95);
-  padding: 22px;
+  padding: 10px;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -235,6 +268,11 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+  }
+
+  .nav-left {
+    display: flex;
+    justify-content: space-between;
   }
 
   .nav-links {

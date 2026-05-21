@@ -7,12 +7,12 @@ const toggleThemeBtn = document.getElementById("btn_layout");
 const toggleFormBtn = document.getElementById("toggle_form_btn");
 const formWrapper = document.getElementById("form_wrapper");
 
-/* THEME */
+
 toggleThemeBtn.addEventListener("click", () => {
   document.body.classList.toggle("light-theme");
 });
 
-/* FORM TOGGLE */
+
 toggleFormBtn.addEventListener("click", () => {
   formWrapper.classList.toggle("hidden");
 });
@@ -47,7 +47,7 @@ form.addEventListener("submit", (e) => {
   formWrapper.classList.add("hidden");
 });
 
-/* DELETE */
+
 grid.addEventListener("click", (e) => {
   if (e.target.classList.contains("btn_delete")) {
     e.target.closest(".book_card").remove();
@@ -60,4 +60,5 @@ const navMenu = document.getElementById("nav_menu");
 
 menuButton.addEventListener("click", () => {
   navMenu.classList.toggle("active");
+  
 });
