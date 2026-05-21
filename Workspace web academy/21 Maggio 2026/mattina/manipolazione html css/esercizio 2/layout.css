@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+
+  background-image: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.page-container {
+  display: grid;
+  grid-template-areas:
+    "navbar"
+    "main"
+    "footer";
+
+  grid-template-rows: 70px 1fr 60px;
+  height: 100vh;
+
+  background-color: rgba(60, 45, 35, 0.55);
+}
+
+body.light-theme {
+  background-image: none;
+  background-color: #f5f0e6;
+}
+
+body.light-theme .page-container {
+  background-color: rgba(255, 250, 240, 0.7);
+}
+
+body.light-theme .navbar,
+body.light-theme .footer {
+  background-color: #a68a72;
+  color: #fffaf3;
+}
+
+body.light-theme .main-content {
+  color: #3d2f27;
+}
+
+body.light-theme #title {
+  color: #5c4636;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: rgba(75, 55, 45, 0.95);
+  color: #f5f0e6;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 30px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-button {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #f5f0e6;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #f5f0e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #e6d3bd;
+}
+
+.main-content {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 30px;
+  color: #f5f0e6;
+}
+
+#title {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+#description {
+  margin-bottom: 20px;
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.right-panel {
+  overflow-y: auto;
+  max-height: 75vh;
+  padding-right: 10px;
+}
+
+.books_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.book_card {
+  background: rgba(255, 250, 242, 0.95);
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: 0.25s ease;
+}
+
+.book_card:hover {
+  transform: translateY(-6px);
+}
+
+.book_card h2 {
+  color: #4a3a30;
+}
+
+.book_card p {
+  color: #6b5548;
+}
+
+.btn_delete {
+  margin-top: auto;
+  background: #a86a5a;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.btn_delete:hover {
+  background: #8b4f42;
+}
+
+.book_form {
+  background: rgba(255, 250, 242, 0.95);
+  padding: 22px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.book_form input,
+.book_form textarea,
+.book_form select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d2c0ae;
+  background: #fffaf3;
+}
+
+.book_form textarea {
+  resize: none;
+  min-height: 90px;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #f5f0e6;
+  background: linear-gradient(135deg, #7a5c4b, #5a4032);
+  transition: 0.25s;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+.hidden {
+  display: none;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f5f0e6;
+}
+
+@media screen and (max-width: 768px) {
+
+  .menu-button {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(75, 55, 45, 0.98);
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .right-panel {
+    max-height: none;
+  }
+
+  .books_grid {
+    grid-template-columns: 1fr;
+  }
+}

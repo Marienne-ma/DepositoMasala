@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libreria</title>
+
+  <link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+
+  <div class="page-container">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+      <div class="nav-left">
+        <h2>📚 Libreria</h2>
+        <button class="menu-button" id="menu_button">☰</button>
+      </div>
+
+      <ul class="nav-links" id="nav_menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Libri</a></li>
+        <li><a href="#">Contatti</a></li>
+        <li><button id="btn_layout">Cambia tema</button></li>
+      </ul>
+
+    </nav>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+      <h1 id="title">Libreria</h1>
+
+      <div id="description">
+        <p>Benvenuti nella Libreria digitale, dove ogni libro apre una nuova storia.</p>
+      </div>
+
+      <!-- LAYOUT 2 COLONNE -->
+      <div class="layout">
+
+        <!-- SINISTRA -->
+        <section class="left-panel">
+
+          <button id="toggle_form_btn">➕ Aggiungi libro</button>
+
+          <div id="form_wrapper" class="hidden">
+
+            <form id="book_form" class="book_form">
+              <input type="text" id="title_input" placeholder="Titolo" required>
+              <input type="text" id="author_input" placeholder="Autore" required>
+
+              <select id="genre_input" required>
+                <option value="" disabled selected>Seleziona genere</option>
+                <option value="Romanzo">Romanzo</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Saggio">Saggio</option>
+                <option value="Fantascienza">Fantascienza</option>
+              </select>
+
+              <input type="number" id="year_input" placeholder="Anno" required>
+
+              <textarea id="desc_input" placeholder="Descrizione" required></textarea>
+
+              <button type="submit">Salva libro</button>
+
+            </form>
+
+          </div>
+
+        </section>
+
+        <!-- DESTRA -->
+        <section class="right-panel">
+          <div id="book_grid" class="books_grid"></div>
+        </section>
+
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2026 - Libreria digitale</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

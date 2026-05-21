@@ -1,0 +1,235 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* SFONDO SAFARI */
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+
+  background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* overlay scuro per leggibilità */
+.page-container {
+  display: grid;
+
+  grid-template-areas:
+    "navbar"
+    "main"
+    "footer";
+
+  grid-template-rows: 70px 1fr 60px;
+
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* =======================
+   LIGHT THEME FIXED
+======================= */
+body.light-theme {
+  background-image: none;
+  background-color: #f2efe6;
+}
+
+body.light-theme .page-container {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* navbar e footer più leggibili */
+body.light-theme .navbar,
+body.light-theme .footer {
+  background-color: #4f6f52;
+  color: #f4f1e6;
+}
+
+/* testi principali */
+body.light-theme .main-content {
+  color: #2d3436;
+}
+
+body.light-theme #title {
+  color: #2f4f3f;
+}
+
+body.light-theme #description {
+  color: #2d3436;
+}
+
+body.light-theme .animal_card {
+  background: white;
+  color: #2d3436;
+}
+
+/* NAVBAR */
+.navbar {
+  grid-area: navbar;
+
+  background-color: rgba(34, 49, 34, 0.95);
+  color: #f4f1e6;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 30px;
+}
+
+/* FIX: centratura lista */
+.nav-links {
+  display: flex;
+  gap: 20px;
+
+  list-style: none;
+
+  align-items: center;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #f4f1e6;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #a3d9a5;
+}
+
+/* BOTTONI */
+button {
+  cursor: pointer;
+
+  padding: 10px 14px;
+  margin: 5px;
+
+  border: none;
+  border-radius: 12px;
+
+  font-weight: bold;
+  letter-spacing: 0.3px;
+
+  color: #f4f1e6;
+
+  background: linear-gradient(135deg, #4f6f52, #2f4f3f);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+  transition: all 0.25s ease;
+}
+
+/* hover */
+button:hover {
+  transform: translateY(-2px) scale(1.03);
+
+  background: linear-gradient(135deg, #6a8f6d, #3f6b55);
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* click */
+button:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* MAIN */
+.main-content {
+  grid-area: main;
+
+  overflow-y: auto;
+
+  padding: 30px;
+
+  color: #f4f1e6;
+}
+
+#title {
+  margin-bottom: 15px;
+  font-size: 2.2rem;
+  color: #ffeaa7;
+}
+
+#description {
+  margin-bottom: 30px;
+  max-width: 800px;
+  line-height: 1.5;
+  color: #f4f1e6;
+}
+
+/* INPUT */
+.hidden {
+  display: none;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* GRID ANIMALI */
+.animals_grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+/* CARD */
+.animal_card {
+  background: rgba(255, 255, 255, 0.9);
+
+  padding: 20px;
+
+  border-radius: 14px;
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+
+  min-height: 180px;
+
+  transition: transform 0.2s;
+}
+
+.animal_card:hover {
+  transform: translateY(-5px);
+}
+
+.animal_card h2 {
+  margin-bottom: 10px;
+  color: #2d3436;
+}
+
+.animal_card p {
+  color: #444;
+}
+
+/* FOOTER */
+.footer {
+  grid-area: footer;
+
+  background-color: rgba(34, 49, 34, 0.95);
+  color: #f4f1e6;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-top: 2px solid #7a9e7e;
+}

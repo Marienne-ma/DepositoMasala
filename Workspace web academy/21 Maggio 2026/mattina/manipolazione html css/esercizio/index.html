@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lo Zoo degli sviluppatori</title>
+
+  <link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+
+  <div class="page-container">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <h2>🦁 Zoo Dev</h2>
+
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Animali</a></li>
+        <li><a href="#">Contatti</a></li>
+        <li><button id="btn_layout">Cambia tema</button>
+        </li>
+      </ul>
+
+    </nav>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+      <h1 id="title">Lo Zoo degli sviluppatori</h1>
+
+      <div id="description">
+  <p>
+    Benvenuti nello Zoo degli sviluppatori, dove ogni programmatore ha il suo spirito animale.
+  </p>
+
+  <ul id="animals_list">
+
+    <li>🦚 Frontender Pavone</li>
+    <li>🦉 Backend Gufo</li>
+    <li>🦎 Full Stack Camaleonte</li>
+    <li>🐜 DevOps Formica</li>
+    <li>🐍 Bug Serpente</li>
+    <li>🐼 QA Panda</li>
+    <li>🦊 Hacker Volpe</li>
+    <li>🐧 Linux Pinguino</li>
+  </ul>
+
+  <ul id="animals_list_add">
+  </ul>
+</div>
+
+      <div>
+        <button id="btn_title">Modifica titolo</button>
+        <button id="btn_description">Aggiorna descrizione</button>
+        <button id="btn_addAnimal">Aggiungi animale</button>
+        <button id="btn_addLion">Aggiungi leone</button>
+        <button id="btn_addElephant">Aggiungi elefante</button>
+
+        <button id="btn_deleteLastAnimal">Elimina ultimo animale</button>
+      </div>
+
+
+      <div>
+        <input type="text" id="animal_name" placeholder="Nome animale" class="hidden">
+        <input type="text" id="animal_desc" placeholder="Descrizione animale" class="hidden">
+        <button id="btn_insertAnimal" class="hidden" >Inserisci</button>
+      </div>
+
+      <!-- CONTENITORE GRID -->
+      <div id="animals_grid" class="animals_grid">
+
+        <div class="animal_card">
+          <h2>🦚 Frontender Pavone</h2>
+          <p>Attento ai dettagli grafici e ai colori.</p>
+          <button class="btn_delete">Elimina animale</button>
+        </div>
+
+        <div class="animal_card">
+          <h2>🦉 Backend Gufo</h2>
+          <p>Lavora silenziosamente dietro le quinte.</p>
+          <button class="btn_delete">Elimina animale</button>
+        </div>
+
+        <div class="animal_card">
+          <h2>🦎 Full Stack Camaleonte</h2>
+          <p>Si adatta a qualsiasi tecnologia.</p>
+          <button class="btn_delete">Elimina animale</button>
+        </div>
+
+        <div class="animal_card">
+          <h2>🐜 DevOps Formica</h2>
+          <p>Mantiene server e deploy sempre attivi.</p>
+          <button class="btn_delete">Elimina animale</button>
+        </div>
+
+        <div class="animal_card">
+          <h2>🐍 Bug Serpente</h2>
+          <p>Compare quando meno te lo aspetti.</p>
+          <button class="btn_delete">Elimina animale</button>
+        </div>
+
+        <div class="animal_card">
+          <h2>🐼 QA Panda</h2>
+          <p>Trova bug anche dove non esistono.</p>
+          <button class="btn_delete">Elimina animale</button>
+        </div>
+
+        <div class="animal_card">
+          <h2>🦊 Hacker Volpe</h2>
+          <p>Astuto e velocissimo nel debugging.</p>
+          <button class="btn_delete">Elimina animale</button>
+        </div>
+
+        <div class="animal_card">
+          <h2>🐧 Linux Pinguino</h2>
+          <p>Vive felicemente dentro il terminale.</p>
+          <button class="btn_delete">Elimina animale</button>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2026 - Lo Zoo degli sviluppatori</p>
+    </footer>
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
