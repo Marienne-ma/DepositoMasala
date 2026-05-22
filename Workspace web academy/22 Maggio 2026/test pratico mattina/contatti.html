@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A-mici - Contatti</title>
+
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" href="image/logo.png" type="image/png">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav>
+
+      <div class="logo_container">
+        <a href="index.html">
+          <img class="logo" src="image/logo.png" alt="Logo A-mici">
+        </a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        ☰
+      </div>
+
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="animali.html">Animali da fattoria</a>
+        <a href="chiSiamo.html">Chi siamo</a>
+        <a href="contatti.html">Contatti</a>
+        <a href="segnalazioni.html">Segnalazioni</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- CONTENUTO -->
+  <main class="main_form">
+
+    <!-- FORM -->
+    <form class="contact-form" action="#" method="post">
+
+      <h2>Scrivici un messaggio</h2>
+
+      <label for="nome">Nome e cognome</label>
+      <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="La tua email" required>
+
+      <label for="telefono">Telefono</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="Il tuo numero (opzionale)">
+
+      <label for="oggetto">Oggetto</label>
+      <input type="text" id="oggetto" name="oggetto" placeholder="Es: Adozione capra">
+
+      <label for="messaggio">Messaggio</label>
+      <textarea id="messaggio" name="messaggio" rows="6" placeholder="Scrivi qui la tua richiesta..."
+        required></textarea>
+
+      <button type="submit_1">Invia richiesta</button>
+
+    </form>
+
+    <!-- INTRO -->
+    <section class="description_container">
+
+      <h1>Contattaci</h1>
+
+      <p class="description">
+        Hai domande sulle adozioni? Vuoi adottare un animale da fattoria o sostenere il nostro progetto?
+        Siamo qui per aiutarti 💚
+      </p>
+
+      <p class="description">
+        Il nostro team di volontari risponde sempre con attenzione per guidarti nel percorso di adozione
+        più adatto a te e agli animali.
+      </p>
+
+      <h2>Informazioni utili</h2>
+
+      <p class="description">
+        📍 Sede: Fattoria A-mici, campagna italiana (visite su appuntamento)<br>
+        📧 Email: adozioni@a-mici.it<br>
+        📞 Telefono: +39 333 123 4567<br>
+        🕒 Orari: Lun - Sab | 9:00 - 18:00
+      </p>
+
+    </section>
+
+
+
+
+    <!-- EXTRA -->
+    <section class="description_container">
+
+      <h2>Prima di contattarci</h2>
+
+      <p class="description">
+        Ricorda: ogni adozione è responsabile e valutata con attenzione per garantire il benessere degli animali.
+      </p>
+
+      <p class="description">
+        Ti guideremo passo dopo passo nella scelta dell’animale più adatto al tuo spazio e al tuo stile di vita 🐑
+      </p>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Associazione A-mici. Tutti i diritti riservati.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

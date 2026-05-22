@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A-mici - Segnalazioni Animali</title>
+
+    <link rel="stylesheet" href="css/layout.css">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="image/logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav>
+
+            <div class="logo_container">
+                <a href="index.html">
+                    <img class="logo" src="image/logo.png" alt="Logo A-mici">
+                </a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                ☰
+            </div>
+
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="animali.html">Animali da fattoria</a>
+                <a href="chiSiamo.html">Chi siamo</a>
+                <a href="contatti.html">Contatti</a>
+                <a href="segnalazioni.html">Segnalazioni</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- CONTENUTO -->
+    <main class="main_form">
+
+        <!-- FORM SEGNALAZIONE -->
+        <form class="contact-form" action="#" method="post">
+
+            <h2>Modulo segnalazione</h2>
+
+            <label for="nome">Nome e cognome</label>
+            <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="La tua email" required>
+
+            <label for="telefono">Telefono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Numero per contatto rapido">
+
+            <label for="luogo">Luogo della segnalazione</label>
+            <input type="text" id="luogo" name="luogo" placeholder="Città / zona / indirizzo" required>
+
+            <label for="tipo">Tipo di segnalazione</label>
+            <input type="text" id="tipo" name="tipo" placeholder="Es: animale ferito, abbandono..." required>
+
+            <label for="messaggio">Descrizione dettagliata</label>
+            <textarea id="messaggio" name="messaggio" rows="6" placeholder="Descrivi cosa hai visto..."
+                required></textarea>
+
+            <label for="foto">Link foto (opzionale)</label>
+            <input type="url" id="foto" name="foto" placeholder="Incolla un link a immagini se disponibile">
+
+            <button type="submit_2">Invia segnalazione</button>
+
+        </form>
+
+        <!-- INTRO -->
+        <section class="description_container">
+
+            <h1>Segnalazioni animali in difficoltà</h1>
+
+            <p class="description">
+                Hai visto un animale in difficoltà? Un abbandono? Una situazione di maltrattamento o emergenza?
+                Segnalacelo subito 🐾
+            </p>
+
+            <p class="description">
+                Il nostro team di volontari valuterà la segnalazione e, se necessario, interverrà il più rapidamente
+                possibile
+                insieme alle strutture competenti.
+            </p>
+
+            <h2>Quando fare una segnalazione</h2>
+
+            <p class="description">
+                🐑 Animali abbandonati in strada o campi<br>
+                🐄 Animali feriti o malnutriti<br>
+                🐓 Situazioni di sovraffollamento o incuria<br>
+                🚫 Segnalazioni di possibile maltrattamento<br>
+                📍 Animali smarriti o senza proprietario visibile
+            </p>
+
+        </section>
+
+        <!-- INFO IMPORTANTI -->
+        <!-- <section class="description_container">
+
+      <h2>Quando fare una segnalazione</h2>
+
+      <p class="description">
+        🐑 Animali abbandonati in strada o campi<br>
+        🐄 Animali feriti o malnutriti<br>
+        🐓 Situazioni di sovraffollamento o incuria<br>
+        🚫 Segnalazioni di possibile maltrattamento<br>
+        📍 Animali smarriti o senza proprietario visibile
+      </p>
+
+    </section> -->
+
+        <!-- NOTA -->
+        <section class="description_container">
+
+            <h2>Importante</h2>
+
+            <p class="description">
+                Le segnalazioni false o non verificabili non verranno prese in carico.
+            </p>
+
+            <p class="description">
+                In caso di emergenza immediata, contatta anche le autorità competenti della tua zona 🚨
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Associazione A-mici. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
