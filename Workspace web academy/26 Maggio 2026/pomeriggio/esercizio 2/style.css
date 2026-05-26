@@ -1,0 +1,208 @@
+:root{
+  --bg:#0f172a;
+  --card:#111827;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+
+  --accent:#22c55e;
+  --accent-dark:#16a34a;
+
+  --danger:#ef4444;
+
+  --radius:14px;
+  --shadow:0 20px 50px rgba(0,0,0,0.4);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:system-ui, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* ================= NAV ================= */
+
+header{
+  background:#0b1220;
+  padding:14px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.nav{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.nav a{
+  color:var(--text);
+  text-decoration:none;
+  padding:8px 14px;
+  border-radius:10px;
+  transition:.2s;
+  font-weight:600;
+}
+
+.nav a:hover{
+  background:rgba(255,255,255,0.08);
+}
+
+/* ================= LAYOUT ================= */
+
+main{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+}
+
+/* ================= CALCOLATRICE CARD ================= */
+
+.card{
+  background:var(--card);
+  width:min(420px, 100%);
+  padding:25px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.card h2{
+  margin-bottom:15px;
+}
+
+/* INPUT */
+
+.calc-input{
+  width:100%;
+  padding:14px;
+  border-radius:10px;
+  border:none;
+  outline:none;
+  font-size:16px;
+  background:#0b1220;
+  color:var(--text);
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+/* BUTTON */
+
+.calc-btn{
+  width:100%;
+  margin-top:12px;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:var(--accent);
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.calc-btn:hover{
+  background:var(--accent-dark);
+}
+
+.calc-btn:active{
+  transform:scale(0.98);
+}
+
+/* RESULT */
+
+.calc-result{
+  margin-top:15px;
+  font-size:18px;
+  color:var(--muted);
+}
+
+/* ================= INFO PAGE ================= */
+
+.profileMain{
+  width:min(900px, 92%);
+  margin:auto;
+  padding:40px 0;
+}
+
+.portfolioHero{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  gap:25px;
+}
+
+.profileCard{
+  background:var(--card);
+  padding:20px;
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,0.08);
+  position:sticky;
+  top:20px;
+}
+
+.avatarWrap{
+  width:80px;
+  height:80px;
+  margin:auto;
+  border-radius:50%;
+  overflow:hidden;
+  border:2px solid var(--accent);
+}
+
+.avatarWrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.feature-list{
+  list-style:none;
+  margin-top:10px;
+}
+
+.feature-list li{
+  padding:8px;
+  margin:6px 0;
+  background:#0b1220;
+  border-radius:8px;
+  color:var(--muted);
+}
+
+/* BUTTON */
+
+.resumeBtn{
+  display:block;
+  margin-top:15px;
+  text-align:center;
+  padding:10px;
+  border-radius:10px;
+  background:var(--accent);
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  text-align:center;
+  padding:20px;
+  color:var(--muted);
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:800px){
+  .portfolioHero{
+    grid-template-columns:1fr;
+  }
+}

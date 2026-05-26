@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calcolatrice</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="nav">
+      <a href="/index.html">Home</a>
+      <a href="/calcolatrice.html">Calcolatrice</a>
+      <a href="/info.html">Chi Sono</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Calcolatrice intelligente 🧮</h1>
+
+      <p>
+        Inserisci un’operazione matematica e ottieni subito il risultato.
+        Puoi usare +, -, *, / e parentesi.
+      </p>
+    </div>
+
+    <div class="lego-card">
+      <strong>⚡ Calcolo rapido</strong><br><br>
+      Scrivi un’espressione e premi il pulsante
+    </div>
+  </section>
+
+  <!-- CALCOLATRICE -->
+  <section class="catalog-section">
+
+    <div class="catalog-container">
+
+      <div class="card catalog-card calculator">
+
+        <h2>🧮 Calcolatrice</h2>
+
+        <input 
+          type="text" 
+          id="inputCalc" 
+          class="calc-input"
+          placeholder="Es: 2+2 oppure (10*5)/2"
+        >
+
+        <button id="calcBtn" class="calc-btn">
+          Calcola
+        </button>
+
+        <h3 id="result" class="calc-result">
+          Risultato: -
+        </h3>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  Calcolatrice © 2026 
+</footer>
+
+<script>const input = document.getElementById("inputCalc");
+const btn = document.getElementById("calcBtn");
+const result = document.getElementById("result");
+
+btn.addEventListener("click", () => {
+
+    try {
+      //trasformo la stringa in codice js
+        const value = eval(input.value);
+        result.textContent = "Risultato: " + value;
+    } catch (err) {
+        result.textContent = "Errore nell'espressione";
+    }
+
+});</script>
+
+<!-- <script src="script.js" defer></script> -->
+
+</body>
+</html>
