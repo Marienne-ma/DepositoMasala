@@ -2,9 +2,7 @@ const file = require("./app");
 const open = (...args) => import("open").then(m => m.default(...args));
 const http = require("http");
 
-let y = false;
-
- let { text, x } = file.getInput();
+let {text, x} = file.getInput();
 
 const server = http.createServer((req, res) => {
 
