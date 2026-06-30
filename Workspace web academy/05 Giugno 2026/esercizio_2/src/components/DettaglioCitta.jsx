@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
-
 export function DettaglioCitta() {
   const { citta } = useParams();
   const navigate = useNavigate();
@@ -10,17 +9,17 @@ export function DettaglioCitta() {
   const [city, setCity] = useState(null);
   const [loading, setLoading] = useState(true);
 
+
 const api = axios.create({
   baseURL: import.meta.env.API,
 });
-
   useEffect(() => {
     axios
       .get(api,
-      )
-      .then((response) => {
-        setCity(response.data);
-        setLoading(false);
+
+  useEffect(() => {
+    axios
+      .get(
       })
       .catch((error) => {
         console.error(error);
