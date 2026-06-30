@@ -1,0 +1,76 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  display: block;
+  margin: 0 auto 1rem auto;
+  padding: 0.8rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+}
+
+p {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+
+.theme-switch {
+  width: 80px;
+  height: 40px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #e2e8f0;
+
+  position: relative;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.thumb {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  position: absolute;
+  top: 3px;
+  left: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+.theme-switch.active {
+  background: #334155;
+}
+
+.theme-switch.active .thumb {
+  transform: translateX(40px);
+}

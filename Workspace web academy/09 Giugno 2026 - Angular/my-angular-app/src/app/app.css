@@ -1,0 +1,55 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 20px;
+}
+app-image-component {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* IMPORTANTISSIMO */
+app-image-component img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.nav-title {
+  font-size: rgba(255, 255, 255, 0.85);
+}
+
+nav a {
+  text-decoration: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: calc(var(--radius) 2px);
+  font-size: 0.9rem;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a.active {
+  background: Wfff;
+  color: black;
+  font-weight: 600;
+}

@@ -1,0 +1,18 @@
+<div class="product-card">
+
+  <h1 class="product-name">
+    {{ data().name }}
+  </h1>
+
+  <h3 class="product-price">
+    € {{ data().price }}
+  </h3>
+
+  <p
+    [class.available]="data().available"
+    [class.unavailable]="!data().available"
+  >
+    {{ data().available ? 'DISPONIBILE' : 'NON DISPONIBILE' }}
+  </p>
+
+</div>

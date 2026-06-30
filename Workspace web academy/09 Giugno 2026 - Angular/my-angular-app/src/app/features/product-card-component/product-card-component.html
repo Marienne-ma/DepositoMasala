@@ -1,0 +1,31 @@
+<div class="container">
+
+  <div class="card product">
+    <img [src]="imageUrl" alt="zaino da montagna">
+
+    <h1>PRODOTTO: {{name}}</h1>
+    <h3>BRAND: {{brand}}</h3>
+
+    <h2>PREZZO: <del>{{price}}€</del> {{finalPrice().toFixed(2)}}€</h2>
+
+    <p class="tags">{{ tags.join(", ") }}</p>
+
+    <h3>STOCK: {{stock}}</h3>
+    <p class="status">
+      {{ available ? "Disponibile" : "Non disponibile" }}
+    </p>
+
+    <button (click)="compra()" [disabled]="stock == 0">Aggiungi al carrello</button>
+    <button (click)="Elimina()" [style.display]="stock < 2 ? 'block' : 'none'">Togli dal carrello</button>
+
+  </div>
+
+  <div class="card editor">
+    <h3>Modifica prodotto</h3>
+
+    <input type="text"
+           [(ngModel)]="name"
+           placeholder="Modifica il nome del prodotto">
+  </div>
+
+</div>

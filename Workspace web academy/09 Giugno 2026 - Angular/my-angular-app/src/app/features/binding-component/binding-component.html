@@ -1,0 +1,16 @@
+<p>binding-component works!</p>
+
+<!-- Interpolation -->
+<p>il nome dell'utente è {{username}}</p>
+
+<!-- Property Binding -->
+ <img [src]="imageUrl" [width]="imageWidth" [height]="imageHeight">
+
+ <!-- Event Binding -->
+  <button (click)="saluta()"></button>
+  <p>il messaggio è {{currentMsg}}</p>
+
+  <!-- Two-Way Binding -->
+  <input value [(ngModel)]="username" placeholder="inserisci nome utente">
+
+  <button (click)="resetNome()">Reset nome</button>

@@ -1,0 +1,17 @@
+<div class="note-sheet">
+  <h3>Esercizio 2 - Signal Computed</h3>
+
+  <p><strong>Prezzo netto:</strong> {{ netPrice() }} €</p>
+
+  <p><strong>IVA:</strong> {{ vat() }} %</p>
+
+  <p><strong>Prezzo lordo:</strong> {{ price() }} €</p>
+
+  <label for="price">Nuovo prezzo netto:</label>
+  <input
+    id="price"
+    type="number"
+    [value]="netPrice()"
+    (input)="updatePrice($event)"
+  />
+</div>

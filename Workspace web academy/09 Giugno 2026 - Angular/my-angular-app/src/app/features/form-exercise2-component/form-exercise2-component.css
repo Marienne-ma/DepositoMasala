@@ -1,0 +1,208 @@
+
+/* =========================
+   BODY
+========================= */
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+
+  background: linear-gradient(135deg, #fdfcff, #f1f5ff);
+
+  color: #111827;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.form-card {
+  width: 380px;
+  min-height: 320px;
+
+  padding: 26px;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 14px;
+}
+
+/* =========================
+   GROUP
+========================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* =========================
+   LABEL
+========================= */
+
+label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+
+  color: #6b7280;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.input {
+  padding: 12px;
+
+  border-radius: 4px;
+
+  border: 1px solid #d1d5db;
+
+  background: #f9fafb;
+
+  color: #111827;
+
+  font-size: 14px;
+
+  transition: all 0.2s ease;
+}
+
+/* PLACEHOLDER */
+.input::placeholder {
+  color: #9ca3af;
+}
+
+/* FOCUS */
+.input:focus {
+  outline: none;
+
+  border-color: #a5b4fc;
+
+  background: #ffffff;
+
+  box-shadow: 0 0 0 3px rgba(165,180,252,0.25);
+}
+
+/* =========================
+   SELECT
+========================= */
+
+select.input {
+  color: #111827;
+  background: #f9fafb;
+}
+
+select.input option {
+  background: #ffffff;
+  color: #111827;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+  margin-top: 10px;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 4px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #a5b4fc, #93c5fd);
+
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(165,180,252,0.35);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  background: #d1d5db;
+  color: #6b7280;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.error {
+  font-size: 12px;
+  color: #ef4444;
+  font-weight: 600;
+
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* =========================
+   ERROR COUNT
+========================= */
+
+.error-count {
+  font-size: 12px;
+  color: #6366f1;
+  font-weight: 700;
+}
+
+/* =========================
+   RESULT
+========================= */
+
+.result {
+  margin-top: 10px;
+
+  padding: 12px;
+
+  border-radius: 4px;
+
+  background: #eef2ff;
+
+  border-left: 3px solid #a5b4fc;
+
+  font-size: 13px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+
+  flex-wrap: wrap;
+
+  padding: 20px;
+}

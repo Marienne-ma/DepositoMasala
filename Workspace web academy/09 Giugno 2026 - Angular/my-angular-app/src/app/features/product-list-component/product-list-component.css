@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+
+.products-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #1e293b;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}

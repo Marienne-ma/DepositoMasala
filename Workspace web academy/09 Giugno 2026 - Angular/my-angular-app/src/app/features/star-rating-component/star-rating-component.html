@@ -1,0 +1,11 @@
+<h2>COMPONENTE FIGLIO</h2>
+
+<div class="rating-container">
+  <div class="rating-buttons">
+    @for (a of maxLength; track $index) {
+      <button (click)="setRating($index+1)">
+        {{ '⭐'.repeat($index + 1) }}
+      </button>
+    }
+  </div>
+</div>

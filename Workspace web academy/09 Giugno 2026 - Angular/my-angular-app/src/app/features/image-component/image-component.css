@@ -1,0 +1,15 @@
+.hero {
+ height: 100%;
+
+  background-image: url('https://angular.dev/assets/images/ng-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+}

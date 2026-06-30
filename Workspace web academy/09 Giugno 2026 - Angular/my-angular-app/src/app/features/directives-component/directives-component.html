@@ -1,0 +1,68 @@
+<h1>Directives</h1>
+
+<h2>@IF</h2>
+
+<button  (click)="isVisible = !isVisible">Toggle</button>
+<p customHighLight>è visibile? {{isVisible}}</p>
+
+@if(isVisible) {
+  <p>Questo testo appare e scompare</p>
+} @else {
+  <p style>clicca</p>
+}
+
+<h2>if-else if-else</h2>
+
+<button (click)="incrementLevel()">Incrementa livello</button>
+
+
+@if(userLevel <= 1) {
+
+<p style="color: red; font-weight: bold" >Sei un principiante</p>
+}@else if(userLevel == 2) {
+<p style="color: red; font-weight: bold" >Sei un principiante</p>
+}@else if (userLevel == 3) {
+<p style="color: red; font-weight: bold" >Sei un principiante</p>
+}@else {
+<p style="color: red; font-weight: bold" >Sei un principiante</p>
+}
+
+
+<h2>@FOR</h2>
+
+<select [(ngModel)]="favFramework" name="" id="">
+  @for (e of frameworks; track e; let i = $index) {
+
+    <option [value]="e">{{i}} -- {{e}}</option>
+
+  }
+</select>
+
+
+<h2>@SWITCH</h2>
+
+<!-- @switch (favFramework) {
+  @case ('Angular') {
+
+  }
+} -->
+
+<h2>@NGCLASS e @NGSTYLE</h2>
+@if(showList){
+  <ul>
+    @for(e of frameworks; track e; let i = $index){
+      <li
+      [ngClass]="{'highlight': e === favFramework}"
+      [ngStyle]="{
+        'font-weight': (i % 2 == 0 && e != favFramework)
+        ? 'bold'
+        : 'normal',
+        'background-color' : e != favFramework ? 'blue' : ''
+        }"  >
+        {{i}}--{{e}}
+      </li>
+    }
+  </ul>
+
+
+}

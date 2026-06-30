@@ -1,0 +1,9 @@
+<p>edit-component works!</p>
+
+<input type="text" [value]="currentValue()" (input)="onInput($event)"
+placeholder="Scrivi una modifica">
+
+<button type="button" (click)="save()">Salva</button>
+
+<p>valore corrente {{currentValue()}}</p>
+<p>valore corrente {{savedValue()}}</p>

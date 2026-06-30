@@ -1,0 +1,49 @@
+<h1>Lista di Studenti</h1>
+
+<div class="students-grid">
+
+  @if (students.length === 0) {
+    <p>Nessuno studente presente.</p>
+  } @else {
+
+    @for (e of students; track e) {
+
+      <div class="student-card">
+
+
+        @if (!e.present) {
+         <span customPopup>Assente</span>
+        }
+
+
+        <h2>{{ e.name }}</h2>
+
+        @switch (e.grade) {
+
+          @case (9)
+          @case (10) {
+            <h3 class="ottimo">Ottimo</h3>
+          }
+
+          @case (7)
+          @case (8) {
+            <h3 class="buono">Buono</h3>
+          }
+
+          @case (6) {
+            <h3 class="sufficiente">Sufficiente</h3>
+          }
+
+          @default {
+            <h3 class="insufficiente">Insufficiente</h3>
+          }
+        }
+
+       
+        <!-- <span>{{ e.present }}</span> -->
+
+      </div>
+    }
+  }
+
+</div>
