@@ -1,0 +1,15 @@
+<div class="parent-container">
+  <h1>Esercizio 2</h1>
+  <h2>COMPONENTE PADRE</h2>
+
+  <p>
+    Rating SIGNAL:
+    <span class="rating-value"> {{ '⭐'.repeat(ratingSignal()) }}</span>
+  </p>
+
+  <app-star-rating-component
+    [maxRating]="ratingSignal()"
+    (ratingSelect)="onRatingChangeSignal($event)"
+  >
+  </app-star-rating-component>
+</div>

@@ -1,0 +1,47 @@
+/* Contenitore principale */
+:host {
+  display: block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.parent-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+
+  background: #ffffff;
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 5px 10px rgba(0, 0, 0, 0.04);
+
+  text-align: center;
+}
+
+/* Titolo */
+.parent-container h1 {
+  color: #1e293b;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+/* Rating attuale */
+.parent-container p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #475569;
+
+  background-color: #f8fafc;
+  padding: 12px;
+  border-radius: 12px;
+
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+/* Valore numerico */
+.parent-container .rating-value {
+  color: #f59e0b;
+  font-size: 1.4rem;
+}

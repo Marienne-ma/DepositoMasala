@@ -1,0 +1,20 @@
+import { Service } from '@angular/core';
+
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  bio: string;
+}
+@Service()
+export class UserService {
+  private users: User[] = [
+    { id: '1', name: 'Alice Rossi', email: 'alice@example.com', bio: 'Frontend developer' },
+    { id: '2', name: 'Marco Bianchi', email: 'marco@example.com', bio: 'UX designer' },
+    { id: '3', name: 'Sara Verdi', email: 'sara@example.com', bio: 'Full-stack engineer' },
+  ];
+
+  getUser(id: string): User | undefined {
+    return this.users.find((u) => u.id === id);
+  }
+}

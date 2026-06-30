@@ -1,0 +1,8 @@
+
+export function Footer() {
+  return (
+    <footer className="footer">
+      <p>© 2026 MyApp - Tutti i diritti riservati</p>
+    </footer>
+  );
+}

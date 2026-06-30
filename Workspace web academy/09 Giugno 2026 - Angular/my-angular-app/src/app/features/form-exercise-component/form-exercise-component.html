@@ -1,0 +1,72 @@
+<h1>Esercizio 1 FormModuls</h1>
+
+<form #myForm="ngForm" (ngSubmit)="onSubmit()" class="form-card">
+
+  <div class="form-group">
+
+    <label>Nome</label>
+    <input
+      class="input"
+      name="nome"
+      type="text"
+      [(ngModel)]="data.nome"
+      required
+      minlength="3"
+      #nomeCtrl="ngModel"
+    />
+
+    @if (
+      (nomeCtrl.errors?.['required'] && nomeCtrl.touched) ||
+      (nomeCtrl.errors?.['minlength'] && nomeCtrl.touched)
+    ) {
+      <span class="error">Nome non valido</span>
+    }
+
+  </div>
+
+  <div class="form-group">
+
+    <label>Email</label>
+    <input
+      class="input"
+      name="email"
+      type="email"
+      [(ngModel)]="data.email"
+      required
+      email
+      #emailCtrl="ngModel"
+    />
+
+    @if (
+      (emailCtrl.errors?.['required'] && emailCtrl.touched) ||
+      (emailCtrl.errors?.['email'] && emailCtrl.touched)
+    ) {
+      <span class="error">Email non valido</span>
+    }
+
+  </div>
+
+  <div class="form-group">
+    
+    <label>Età</label>
+    <input
+      class="input"
+      name="eta"
+      type="number"
+      [(ngModel)]="data.eta"
+      required
+      min="18"
+      #etaCtrl="ngModel"
+    />
+
+    @if (
+      (etaCtrl.errors?.['required'] && etaCtrl.touched) ||
+      (etaCtrl.errors?.['min'] && etaCtrl.touched)
+    ) {
+      <span class="error">Età non valida</span>
+    }
+
+  </div>
+
+  <button type="submit" class="btn" [disabled]="myForm.invalid">Invia</button>
+</form>

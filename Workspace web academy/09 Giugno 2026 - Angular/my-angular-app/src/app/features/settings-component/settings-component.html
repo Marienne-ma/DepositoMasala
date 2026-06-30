@@ -1,0 +1,14 @@
+<h1>Esercizio 2</h1>
+<p>SETTING COMPONENT</p>
+
+<input type="text"  (input)="setUsername($event)">
+<button
+  class="theme-switch"
+  (click)="setDarkTheme()"
+  [class.active]="userPreferenceService.darkTheme()">
+
+  <span class="thumb">
+    {{ userPreferenceService.darkTheme() ? '🌙' : '☀️' }}
+  </span>
+
+</button>

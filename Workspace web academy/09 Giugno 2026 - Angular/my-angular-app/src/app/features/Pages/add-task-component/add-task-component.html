@@ -1,0 +1,12 @@
+<p>add-task-component works!</p>
+
+<ul>
+  @for (task of loadedTask; track task.id) {
+
+    <li>
+      {{task.title}} -- {{task.description}} -- {{task.completed}}
+    </li>
+  }@empty {
+    <li>Nessuna Task caricata</li>
+  }
+</ul>

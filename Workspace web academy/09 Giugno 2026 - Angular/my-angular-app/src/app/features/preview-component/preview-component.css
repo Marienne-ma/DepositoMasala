@@ -1,0 +1,40 @@
+:host {
+  display: block;
+}
+
+div {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background: #f8fafc;
+  color: #1e293b;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 400;
+  color: #475569;
+}
+p {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Dark theme */
+.dark {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+.dark h3 {
+  color: #cbd5e1;
+}

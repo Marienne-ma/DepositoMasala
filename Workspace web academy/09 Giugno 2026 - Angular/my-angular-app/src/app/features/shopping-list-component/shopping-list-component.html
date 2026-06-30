@@ -1,0 +1,19 @@
+<h2 class="title">SHOPPING LIST COMPONENT</h2>
+
+<div class="notepad">
+
+  @for (item of shoppingListService.items(); track item; let i = $index) {
+
+    <div class="note-row">
+      <span>{{ item }}</span>
+
+      <button
+        class="delete-btn"
+        (click)="removeServiceList(i)">
+        ✖
+      </button>
+    </div>
+
+  }
+
+</div>

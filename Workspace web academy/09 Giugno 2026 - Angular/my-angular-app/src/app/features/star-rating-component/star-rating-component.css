@@ -1,0 +1,52 @@
+:host {
+  display: block;
+}
+
+/* Card figlio */
+.rating-container {
+  padding: 1.5rem;
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #fef3c7,
+    #fde68a
+  );
+
+  border: 2px solid #fbbf24;
+}
+
+/* Pulsanti */
+.rating-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.rating-buttons button {
+  border: none;
+  border-radius: 12px;
+
+  padding: 12px 18px;
+
+  background: white;
+  color: #92400e;
+
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rating-buttons button:hover {
+  transform: translateY(-3px);
+  background: #f59e0b;
+  color: white;
+}
+
+.rating-buttons button:active {
+  transform: scale(0.95);
+}

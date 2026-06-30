@@ -1,0 +1,48 @@
+.note-sheet {
+  max-width: 350px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+}
+
+.note-sheet h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 8px;
+}
+
+.note-sheet p {
+  margin: 8px 0;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 4px;
+}
+
+.note-sheet label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.note-sheet input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: none;
+  border-bottom: 2px solid #bdbdbd;
+  background: transparent;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.note-sheet input:focus {
+  border-bottom-color: #1976d2;
+}
